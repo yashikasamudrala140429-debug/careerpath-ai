@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --bg: #0b0d16;
+  --panel: #151827;
+  --purple: #a78bfa;
+  --blue: #7797ff;
+  --text: #f5f5ff;
+  --muted: #a0a5bc;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.7;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 7%;
+  border-bottom: 1px solid #292c40;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #0b0d16ee;
+  backdrop-filter: blur(12px);
+}
+
+header h2 span { color: var(--purple); }
+
+nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 13px;
+}
+
+nav a:hover { color: var(--purple); }
+
+.hero {
+  padding: 90px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  background: radial-gradient(ellipse at 80% 30%, #352553, transparent 50%);
+}
+
+.hero-content { max-width: 600px; }
+
+.tag {
+  color: var(--purple);
+  letter-spacing: 2px;
+  font-size: 11px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+h1 {
+  font-size: clamp(35px, 5vw, 57px);
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+h1 span {
+  background: linear-gradient(90deg, #c4a8ff, #83a9ff);
+  color: transparent;
+  background-clip: text;
+}
+
+.hero-content > p:not(.tag) {
+  color: var(--muted);
+  margin-bottom: 28px;
+}
+
+.button {
+  display: inline-block;
+  padding: 11px 19px;
+  border: none;
+  border-radius: 9px;
+  background: linear-gradient(110deg, #a17cf4, #708bff);
+  color: white;
+  text-decoration: none;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 6px 5px 6px 0;
+  transition: transform .2s, opacity .2s;
+}
+
+.button:hover { transform: translateY(-2px); opacity: .9; }
+
+.secondary {
+  background: #25233a;
+  border: 1px solid #51476e;
+}
+
+.hero-card {
+  width: 300px;
+  padding: 30px;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #211d36, #151827);
+  border: 1px solid #42365e;
+  box-shadow: 0 20px 60px #0005;
+}
+
+.sparkle {
+  color: var(--purple);
+  font-size: 38px;
+}
+
+.hero-card h3 { margin: 10px 0; }
+.hero-card p, .hero-card small { color: var(--muted); font-size: 12px; }
+
+.progress {
+  height: 7px;
+  background: #343047;
+  border-radius: 10px;
+  margin: 20px 0 10px;
+}
+
+.progress div {
+  width: 80%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--purple), var(--blue));
+  border-radius: 10px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding: 0 8%;
+  margin: 10px 0 30px;
+}
+
+.stat, .template-card, .quiz {
+  background: var(--panel);
+  border: 1px solid #292d42;
+  border-radius: 14px;
+  padding: 22px;
+}
+
+.stat h2 { color: var(--purple); font-size: 27px; }
+.stat p { color: var(--muted); font-size: 12px; }
+
+.section { padding: 65px 8%; }
+.section > h2 { font-size: 29px; margin-bottom: 5px; }
+.muted, .note { color: var(--muted); font-size: 13px; }
+.note { margin-top: 12px; font-size: 11px; }
+
+input, textarea, select {
+  width: 100%;
+  background: #10121f;
+  border: 1px solid #34374d;
+  border-radius: 9px;
+  color: white;
+  padding: 13px;
+  font: inherit;
+  font-size: 13px;
+  margin: 12px 0;
+}
+
+textarea { resize: vertical; }
+label { display: block; font-size: 13px; margin-top: 15px; }
+
+.filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 12px 0 20px;
+}
+
+.filter {
+  background: #1a1d2c;
+  border: 1px solid #33364b;
+  color: var(--muted);
+  border-radius: 20px;
+  padding: 7px 15px;
+  cursor: pointer;
+}
+
+.filter.active, .filter:hover {
+  background: #322747;
+  border-color: var(--purple);
+  color: white;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.template-card h3 { font-size: 15px; margin: 12px 0 7px; }
+.template-card p { color: var(--muted); font-size: 12px; overflow-wrap: anywhere; }
+.category { color: var(--purple); font-size: 11px; }
+
+.smal

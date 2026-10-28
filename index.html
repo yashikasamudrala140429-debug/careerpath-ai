@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PromptLab | AI Prompt Studio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h2>✦ Prompt<span>Lab</span></h2>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#library">Library</a>
+      <a href="#improver">Improve Prompt</a>
+      <a href="#saved">Saved</a>
+      <a href="#challenge">Quiz</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <p class="tag">YOUR AI LEARNING STUDIO</p>
+        <h1>Better prompts.<br><span>Better possibilities.</span></h1>
+        <p>Learn how to communicate with AI, improve your instructions, and create powerful prompts.</p>
+        <a class="button" href="#improver">Start Improving →</a>
+      </div>
+      <div class="hero-card">
+        <div class="sparkle">✦</div>
+        <h3>Your Prompt Toolkit</h3>
+        <p>Role + Context + Goal + Output</p>
+        <div class="progress"><div></div></div>
+        <small>Build better AI instructions</small>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="stat"><h2 id="savedCount">0</h2><p>Saved Prompts</p></div>
+      <div class="stat"><h2>8</h2><p>Prompt Templates</p></div>
+      <div class="stat"><h2 id="score">0</h2><p>Quiz Points</p></div>
+    </section>
+
+    <section id="library" class="section">
+      <p class="tag">DISCOVER & LEARN</p>
+      <h2>Prompt Library</h2>
+      <p class="muted">Find useful prompts for your everyday tasks.</p>
+
+      <input id="search" type="search" placeholder="Search prompts...">
+
+      <div class="filters">
+        <button class="filter active" data-category="All">All</button>
+        <button class="filter" data-category="Coding">Coding</button>
+        <button class="filter" data-category="Education">Education</button>
+        <button class="filter" data-category="Writing">Writing</button>
+        <button class="filter" data-category="Design">Design</button>
+      </div>
+      <div id="promptList" class="cards"></div>
+    </section>
+
+    <section id="improver" class="section">
+      <p class="tag">PROMPT WORKSHOP</p>
+      <h2>Improve Your Prompt</h2>
+      <p class="muted">Turn a simple instruction into a clearer, more detailed prompt.</p>
+
+      <label for="original">Your original prompt</label>
+      <textarea id="original" rows="5" placeholder="Example: Make a website for students"></textarea>
+
+      <label for="goal">Choose a goal</label>
+      <select id="goal">
+        <option value="general">General task</option>
+        <option value="coding">Coding</option>
+        <option value="study">Education</option>
+        <option value="writing">Writing</option>
+        <option value="design">Design</option>
+      </select>
+
+      <button class="button" id="improve">✦ Improve Prompt</button>
+
+      <div id="result" class="result hidden">
+        <h3>Your improved prompt</h3>
+        <p id="improvedText"></p>
+        <button class="button" id="copy">Copy Prompt</button>
+        <button class="button secondary" id="save">♡ Save Prompt</button>
+      </div>
+      <p class="note">Demo mode: prompt improvements are generated using JavaScript rules, not a live AI model.</p>
+    </section>
+
+    <section id="saved" class="section">
+      <p class="tag">YOUR COLLECTION</p>
+      <h2>My Saved Prompts</h2>
+      <div id="savedList" class="cards"></div>
+      <p id="emptySaved" class="muted">No saved prompts yet. Save one from the library!</p>
+    </section>
+
+    <section id="challenge" class="section">
+      <p class="tag">TEST YOUR SKILLS</p>
+      <h2>Prompt Challenge</h2>
+      <div class="quiz">
+        <h3>Which is the strongest prompt?</h3>
+        <p>Choose the best instruction for learning about photosynthesis.</p>
+        <button class="answer" data-correct="false">A. Tell me about plants.</button>
+        <button class="answer" data-correct="true">B. Explain photosynthesis in 5 simple steps with an example and 3 quiz questions.</bu
